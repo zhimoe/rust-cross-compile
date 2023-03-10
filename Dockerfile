@@ -2,6 +2,6 @@ FROM centos:latest
 
 WORKDIR /opt
 
-COPY target/x86_64-unknown-linux-musl/release/rs-cross-compile ./
+COPY target/x86_64-unknown-linux-musl/release/rsx ./
 
-CMD ["./rs-cross-compile"]
+CMD ["./rsx"]

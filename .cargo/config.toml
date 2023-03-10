@@ -1,5 +1,5 @@
 [target.x86_64-unknown-linux-musl]
-linker = "x86_64-linux-musl-gcc"
+linker = "rust-lld"
 #> cargo build --release --target x86_64-unknown-linux-musl
 
 [target.x86_64-pc-windows-msvc]
