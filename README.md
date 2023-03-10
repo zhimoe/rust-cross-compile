@@ -41,14 +41,15 @@ docker run rsx
 
 ```shell
 # 1 add cargo target
-rustup target add x86_64-pc-windows-msvc
+# rustup target add x86_64-pc-windows-msvc
+rustup target add x86_64-pc-windows-gnu
 
-# 2 add target in $project/.cargo/config.toml
-[target.x86_64-pc-windows-msvc]
-rustflags = ["-C", "target-feature=+crt-static"]
+# 2 fix error: linker `x86_64-w64-mingw32-gcc` not found
+brew install mingw-w64
 
+# 3 no need anything in $project/.cargo/config.toml, just build
 # 3 build
-cargo build --release --target x86_64-pc-windows-msvc
+cargo build --release --target x86_64-pc-windows-gnu
 ```
 
 ### windows -> linux
